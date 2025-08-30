@@ -2,7 +2,7 @@
 
 ## Project Overview & Problem Statement
 
-Our project, **TikTok Mixtape**, proposes a new way to create a transparent and legitimate flow of value from consumers to creators. Instead of relying solely on likes, views, or ad-based monetization, TikTok Mixtape empowers users to generate personalized montages of their favorite creators’ content. This approach introduces:  
+Our project, **TikTok Mixtape**, proposes a new way to create a transparent and legitimate flow of value from consumers to creators. Instead of relying solely on likes, views, or ad-based monetization, TikTok Mixtape automatically generates personalized montages of each user’s most engaging content from their favorite creators based on pre-decided metrics. This approach introduces:
 
 - **Content Evaluation through Consumer Choice**: By analysing user interactions and engagements our solution curates personalised mixtape montages serving as a direct signal of consumer preferences while filtering out any bot-like postings
 - **Profit-Sharing Mechanism**: Creators whose content is featured in user mixtapes can be rewarded proportionally, ensuring fairer distribution based on engagement.  
@@ -40,6 +40,7 @@ TikTok Mixtape creates a **new, fairer pathway for value transfer**:
 - **TikTok Clone Base UI** – served as the foundation for extending new features.  
     The TikTok UI Clone was created by [s-shemmee](https://github.com/s-shemmee).
 - **Custom UI Assets** – profile icons, buttons, and design elements added to reflect the MixTape functionality.  
+*All media (videos in the FYP and profile picture) is media taken by our  group and not taken from elsewhere on the internet*
 
 ---
 
