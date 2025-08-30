@@ -37,7 +37,7 @@ function ProfilePage() {
 
             
             <button>Edit Profile</button>
-            <button className="p-3"> Weekly Rewind</button>
+            <button className="p-3"> Weekly Mixtape</button>
           </div>
 
           
