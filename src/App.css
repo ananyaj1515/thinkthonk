@@ -7,10 +7,15 @@ html {
 .app {
   height: 100vh;
   background-color: #000;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  color: #fff;
 }
 
+
+/* TikTok Feed Container */
 .container {
   position: relative;
   height: 667px;
@@ -18,6 +23,7 @@ html {
   border-radius: 25px;
   overflow: scroll;
   scroll-snap-type: y mandatory;
+  background-color: #000;
 }
 
 .container::-webkit-scrollbar {
@@ -29,6 +35,7 @@ html {
   scrollbar-width: none;
 }
 
+/* Top Navbar */
 .top-navbar {
   position: sticky;
   top: 0;
@@ -39,6 +46,7 @@ html {
   justify-content: space-around;
   align-items: center;
   z-index: 1;
+  background: #000; /* ensure visible on profile page too */
 }
 
 .top-navbar h2 {
@@ -65,13 +73,13 @@ html {
   transform: translateX(50%);
 }
 
-
 .top-navbar .icon {
   font-size: 16px;
   color: #fff;
   cursor: pointer;
 }
 
+/* Bottom Navbar */
 .bottom-navbar {
   position: sticky;
   background-color: #161616;
@@ -95,7 +103,7 @@ html {
   color: #d4d3d3;
 }
 
-.bottom-navbar .plus{
+.bottom-navbar .plus {
   background-color: #fff;
   color: #161616;
   padding: 5px 10px;
@@ -124,4 +132,86 @@ html {
   font-size: 7px;
   padding: 5px;
   border-radius: 50%;
+}
+
+/* ========================= */
+/* Profile Page Styling */
+/* ========================= */
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.profile-header {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.profile-header img {
+  border: 2px solid #333;
+}
+
+.profile-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.profile-header p {
+  color: #aaa;
+  font-size: 13px;
+}
+
+/* Stats row */
+.profile-header .stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+  gap: 2rem;
+}
+
+.profile-header .stats div span {
+  font-weight: bold;
+  display: block;
+  color: #fff;
+}
+
+.profile-header .stats div p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Edit Button */
+.profile-header button {
+  margin-top: 1rem;
+  padding: 6px 12px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 13px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.profile-header button:hover {
+  background: #222;
+}
+
+/* Profile Video Grid */
+.profile-page .grid {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.profile-page .grid img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
 }

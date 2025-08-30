@@ -3,48 +3,117 @@ import './App.css';
 import VideoCard from './components/VideoCard';
 import BottomNavbar from './components/BottomNavbar';
 import TopNavbar from './components/TopNavbar';
+import ProfilePage from './components/ProfilePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// This array holds information about different videos
+
+// Video data
 const videoUrls = [
   {
-    url: require('./videos/video1.mp4'),
-    profilePic: 'https://p16-sign-useast2a.tiktokcdn.com/tos-useast2a-avt-0068-giso/9d429ac49d6d18de6ebd2a3fb1f39269~c5_100x100.jpeg?x-expires=1688479200&x-signature=pjH5pwSS8Sg1dJqbB1GdCLXH6ew%3D',
-    username: 'csjackie',
-    description: 'Lol nvm #compsci #chatgpt #ai #openai #techtok',
-    song: 'Original sound - Famed Flames',
-    likes: 430,
-    comments: 13,
-    saves: 23,
-    shares: 1,
+    url: require('./videos/1.mp4'),
+    profilePic: '',
+    username: 'allylovesfireworks',
+    description: "baby you're a firework🎇🎇 #fireworks #cny #JBMalaysia ",
+    song: 'Original Sound',
+    likes: 4307,
+    comments: 134,
+    saves: 53,
+    shares: 653,
   },
   {
-    url: require('./videos/video2.mp4'),
-    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/eace3ee69abac57c39178451800db9d5~c5_100x100.jpeg?x-expires=1688479200&x-signature=wAkVmwL7lej15%2B16ypSWQOqTP8s%3D',
-    username: 'dailydotdev',
-    description: 'Every developer brain @francesco.ciulla #developerjokes #programming #programminghumor #programmingmemes',
-    song: 'tarawarolin wants you to know this isnt my sound - Chaplain J Rob',
+    url: require('./videos/2.mp4'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/eace3ee69abac57c39178451800db9d5~c5_100x100.jpeg',
+    username: 'allylovesfireworks',
+    description: 'Happy Birthday Singapore 🎆🎇 #fireworks #SG60 #ndp #happybirthdaysingapore',
+    song: 'Original Sound',
     likes: '13.4K',
     comments: 3121,
     saves: 254,
-    shares: 420,
+    shares: 3420,
   },
   {
-    url: require('./videos/video3.mp4'),
-    profilePic: 'https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4e6698b235eadcd5d989a665704daf68~c5_100x100.jpeg?x-expires=1688479200&x-signature=wkwHDKfNuIDqIVHNm29%2FRf40R3w%3D',
-    username: 'wojciechtrefon',
-    description: '#programming #softwareengineer #vscode #programmerhumor #programmingmemes',
-    song: 'help so many people are using my sound - Ezra',
+    url: require('./videos/3.mp4'),
+    profilePic: 'https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4e6698b235eadcd5d989a665704daf68~c5_100x100.jpeg',
+    username: 'travel_with_navyaya',
+    description: 'quack quack #ducks #travelvlogging #vietnam #cuteanimals',
+    song: 'Contains: Famed Flames',
     likes: 5438,
-    comments: 238,
-    saves: 12,
-    shares: 117,
+    comments: 538,
+    saves: 82,
+    shares: 1117,
   },
   {
-    url: require('./videos/video4.mp4'),
-    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg?x-expires=1688486400&x-signature=ssUbbCpZFJj6uj33D%2BgtcqxMvgQ%3D',
-    username: 'faruktutkus',
-    description: 'Wait for the end | Im RTX 4090 TI | #softwareengineer #softwareengineer #coding #codinglife #codingmemes ',
+    url: require('./videos/4.mp4'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'faruktuktuk',
+    description: 'SUPERNOVA 25 - The biggest concert in NUS! So hyped #bestnightofmylife #freshman #freebeer #supernova',
+    song: 'Original Sound',
+    likes: 9689,
+    comments: 830,
+    saves: 1037,
+    shares: 3967,
+  },
+  {
+    url: require('./videos/5.mp4'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'travel_with_navyaya',
+    description: 'Almost got hit by the train guys 😭 #vietnamtraveldiaries #helpme #ilovetrains #travelvlogging',
+    song: 'Song: The Choo Choo Train',
+    likes: 9689,
+    comments: 230,
+    saves: 1037,
+    shares: 967,
+  },
+  {
+    url: require('./videos/6.mp4'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'assthetic_aryan',
+    description: 'House Party #sigma #codinglife #codingmemes',
     song: 'orijinal ses - Computer Science',
+    likes: 9689,
+    comments: 230,
+    saves: 1037,
+    shares: 967,
+  },
+  {
+    url: require('./videos/7.MOV'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'trains4life',
+    description: 'this was so high up!!',
+    song: 'original audio - mountain sound',
+    likes: 9689,
+    comments: 230,
+    saves: 1037,
+    shares: 967,
+  },
+  {
+    url: require('./videos/8.MOV'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'countrylove',
+    description: 'helikopter helikpoter',
+    song: 'orijinal ses - bladesss',
+    likes: 9689,
+    comments: 230,
+    saves: 1037,
+    shares: 967,
+  },
+  {
+    url: require('./videos/9.mov'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'cavevibes',
+    description: 'you would not believe your eyes if ten million fireflies',
+    song: 'Fireflies - Owl City',
+    likes: 9689,
+    comments: 230,
+    saves: 1037,
+    shares: 967,
+  },
+  {
+    url: require('./videos/10.MOV'),
+    profilePic: 'https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/4bda52cf3ad31c728153859262c329db~c5_100x100.jpeg',
+    username: 'instrusivethoughts',
+    description: 'the water is so loud!!!',
+    song: 'orijinal ses -Original Audio',
     likes: 9689,
     comments: 230,
     saves: 1037,
@@ -54,27 +123,34 @@ const videoUrls = [
 
 function App() {
   const [videos, setVideos] = useState([]);
+  const [userInteracted, setUserInteracted] = useState(false);
   const videoRefs = useRef([]);
 
   useEffect(() => {
     setVideos(videoUrls);
   }, []);
 
+  // Detect first user interaction
+  useEffect(() => {
+    const handleInteraction = () => setUserInteracted(true);
+    window.addEventListener('click', handleInteraction, { once: true });
+    return () => window.removeEventListener('click', handleInteraction);
+  }, []);
+
   useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.8, // Adjust this value to change the scroll trigger point
+      threshold: 0.8,
     };
 
-    // This function handles the intersection of videos
     const handleIntersection = (entries) => {
+      if (!userInteracted) return; // Only play after user interacts
       entries.forEach((entry) => {
+        const videoElement = entry.target;
         if (entry.isIntersecting) {
-          const videoElement = entry.target;
-          videoElement.play();
+          videoElement.play().catch((err) => console.log('Play failed:', err));
         } else {
-          const videoElement = entry.target;
           videoElement.pause();
         }
       });
@@ -82,27 +158,22 @@ function App() {
 
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    // We observe each video reference to trigger play/pause
     videoRefs.current.forEach((videoRef) => {
-      observer.observe(videoRef);
+      if (videoRef) observer.observe(videoRef);
     });
 
-    // We disconnect the observer when the component is unmounted
-    return () => {
-      observer.disconnect();
-    };
-  }, [videos]);
+    return () => observer.disconnect();
+  }, [videos, userInteracted]);
 
-  // This function handles the reference of each video
   const handleVideoRef = (index) => (ref) => {
     videoRefs.current[index] = ref;
   };
 
-  return (
+  // Home feed component
+  const HomeFeed = () => (
     <div className="app">
       <div className="container">
-        <TopNavbar className="top-navbar" />
-        {/* Here we map over the videos array and create VideoCard components */}
+        <TopNavbar />
         {videos.map((video, index) => (
           <VideoCard
             key={index}
@@ -116,14 +187,22 @@ function App() {
             url={video.url}
             profilePic={video.profilePic}
             setVideoRef={handleVideoRef(index)}
-            autoplay={index === 0}
           />
         ))}
-        <BottomNavbar className="bottom-navbar" />
+        <BottomNavbar />
       </div>
     </div>
   );
-  
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomeFeed />} />
+        <Route path="/profile" element={<ProfilePage />} />
+       
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
