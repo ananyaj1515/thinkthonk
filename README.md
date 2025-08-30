@@ -39,6 +39,7 @@ TikTok Mixtape creates a **new, fairer pathway for value transfer**:
 
 - **TikTok Clone Base UI** – served as the foundation for extending new features.  
     The TikTok UI Clone was created by [s-shemmee](https://github.com/s-shemmee).
+    link to original clone [repo](https://github.com/s-shemmee/TikTok-UI-Clone)
 - **Custom UI Assets** – profile icons, buttons, and design elements added to reflect the MixTape functionality.  
 *All media (videos in the FYP and profile picture) is media taken by our  group and not taken from elsewhere on the internet*
 
