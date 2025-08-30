@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TikTok UI Clone
 The TikTok UI Clone is a web application developed to replicate the user interface of the TikTok app. It is built using React.js, CSS, and JSX, and allows users to browse and view TikTok-style videos in a familiar and interactive interface.
 
@@ -34,3 +35,7 @@ The TikTok UI Clone was created by [s-shemmee](https://github.com/s-shemmee).
 
 # License
 This project is licensed under the MIT license.
+=======
+# thinkthonk
+TikTok Tech Jam Submission
+>>>>>>> 1874f609f4905b8ac1377ebbe9e530537816d797
