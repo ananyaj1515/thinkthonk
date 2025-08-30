@@ -4,6 +4,7 @@ import VideoCard from './components/VideoCard';
 import BottomNavbar from './components/BottomNavbar';
 import TopNavbar from './components/TopNavbar';
 import ProfilePage from './components/ProfilePage';
+import MontagePage from './components/MontagePage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -199,7 +200,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeFeed />} />
         <Route path="/profile" element={<ProfilePage />} />
-       
+        <Route path="/montage" element={<MontagePage />} />
       </Routes>
     </Router>
   );

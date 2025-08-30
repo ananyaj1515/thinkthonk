@@ -1,9 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import TopNavbar from "./TopNavbar";
 import BottomNavbar from "./BottomNavbar";
 import pfp from "../pics/pfp.JPG"
 
 function ProfilePage() {
+  const navigate = useNavigate();
   return (
     <div className="app">
       <div className="container">
@@ -37,7 +39,7 @@ function ProfilePage() {
 
             
             <button>Edit Profile</button>
-            <button className="p-3"> Weekly Mixtape</button>
+            <button className="p-3" onClick={() => navigate('/montage')}> Weekly MixTape</button>
           </div>
 
           
